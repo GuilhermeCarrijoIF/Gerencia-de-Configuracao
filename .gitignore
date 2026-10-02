@@ -1,0 +1,10 @@
+.DS_Store
+**/target/
+tmp/
+output/
+build/
+.gradle/
+.gradle-local/
+.m2-local/
+.idea/
+.vscode/
