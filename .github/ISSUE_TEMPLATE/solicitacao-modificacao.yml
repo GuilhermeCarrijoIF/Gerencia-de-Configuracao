@@ -1,0 +1,149 @@
+name: Solicitação de modificação
+description: Registre e acompanhe uma mudança pelo processo de SCM.
+title: '[SCM] '
+body:
+- type: markdown
+  attributes:
+    value: Formulário de solicitação de modificação adaptado dos slides 50 e 51. O GitHub registra o número, o autor
+      e a data de abertura da issue. A análise, a decisão, a implementação, o QA e o CM são atualizados conforme
+      cada etapa ocorrer. As estimativas e a release inicial são propostas de planejamento.
+- type: input
+  id: projeto
+  attributes:
+    label: Projeto
+    placeholder: Gerência de Configuração
+  validations:
+    required: true
+- type: textarea
+  id: mudanca
+  attributes:
+    label: Modificação solicitada
+    description: Descreva o estado atual e a mudança pretendida.
+  validations:
+    required: true
+- type: textarea
+  id: justificativa
+  attributes:
+    label: Justificativa e benefícios
+    description: Explique a necessidade e o benefício esperado.
+  validations:
+    required: true
+- type: textarea
+  id: componentes
+  attributes:
+    label: Componentes afetados
+    description: Informe os arquivos, módulos ou serviços diretamente alterados.
+  validations:
+    required: true
+- type: textarea
+  id: associados
+  attributes:
+    label: Componentes associados
+    value: A avaliar.
+    description: Informe dependências e possíveis impactos indiretos.
+  validations:
+    required: false
+- type: textarea
+  id: criterios
+  attributes:
+    label: Critérios de aceitação
+    description: Liste resultados verificáveis. Deixe as caixas desmarcadas até a validação.
+  validations:
+    required: true
+- type: dropdown
+  id: prioridade
+  attributes:
+    label: Prioridade proposta
+    options:
+    - Baixa
+    - Média
+    - Alta
+    - Crítica
+    description: A prioridade final é definida na análise.
+  validations:
+    required: true
+- type: input
+  id: esforco
+  attributes:
+    label: Esforço estimado
+    placeholder: 'Exemplo: 2 horas'
+    description: Estimativa inicial; pode ser revisada na análise.
+  validations:
+    required: false
+- type: input
+  id: release
+  attributes:
+    label: Release planejada
+    placeholder: 1.0.0 ou 1.1.0
+    description: Use o padrão de versionamento do projeto. Preencher este campo não configura o Milestone nem o
+      campo Release do Project.
+  validations:
+    required: true
+- type: textarea
+  id: analise
+  attributes:
+    label: Análise da modificação
+    value: |-
+      Analista: A definir.
+      Data da análise: Pendente.
+      Avaliação técnica e de impacto: Pendente.
+      Prioridade aprovada: Pendente.
+      Esforço aprovado: Pendente.
+    description: Preenchido pelo analista durante a avaliação.
+  validations:
+    required: false
+- type: textarea
+  id: decisao
+  attributes:
+    label: Decisão e encaminhamento
+    value: |-
+      Data de envio à equipe: Pendente.
+      Responsável pela decisão (CCB ou responsável do projeto): A definir.
+      Data da decisão: Pendente.
+      Decisão: Pendente.
+      Release aprovada: Pendente.
+    description: Preenchido pelo responsável pela aprovação da mudança.
+  validations:
+    required: false
+- type: textarea
+  id: implementacao
+  attributes:
+    label: Implementação da modificação
+    value: |-
+      Plano de implementação: Pendente.
+      Implementador: A definir.
+      Data da alteração: Pendente.
+      Branch, pull request e commit: Pendente.
+    description: Atualizado pelo implementador após a aprovação.
+  validations:
+    required: false
+- type: textarea
+  id: qualidade
+  attributes:
+    label: Garantia da qualidade (QA)
+    value: |-
+      Data de envio ao QA: Pendente.
+      Responsável pelo QA: A definir.
+      Decisão do QA: Pendente.
+      Evidências de testes: Pendente.
+    description: Atualizado pelo responsável pelos testes e pela validação.
+  validations:
+    required: false
+- type: textarea
+  id: configuracao
+  attributes:
+    label: Gerenciamento de configuração (CM)
+    value: |-
+      Data de envio ao gerenciamento de configuração (CM): Pendente.
+      Responsável pelo CM: A definir.
+      Versão ou baseline resultante: Pendente.
+    description: Atualizado quando a alteração validada é incorporada à versão.
+  validations:
+    required: false
+- type: textarea
+  id: comentarios
+  attributes:
+    label: Comentários
+    value: Solicitação registrada para planejamento. Implementação e validação pendentes.
+  validations:
+    required: false
